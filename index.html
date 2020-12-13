@@ -1,0 +1,124 @@
+<!--
+    酷雷雷教(幫)小易寫網頁ww
+    https://leko.moe/
+    小易沒有美感，勝勝快來教我
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>嘿！小易 18 歲了</title>
+    <link href="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.css" rel='stylesheet'>
+    <script src="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
+    <style>
+
+    </style>
+
+    <!-- 小易計時器 -->
+    <script>
+        const COUNTER_TEXT = "你知道嗎？小易已經誕生 {DAY} 天了！"
+        const BIRTHDAY = new Date("2002-12-14")
+
+        const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+        function dateDiffInDays(a, b) {
+            const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+            const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+
+            return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+        }
+
+        function changeCounterText() {
+            const day = dateDiffInDays(BIRTHDAY, new Date())
+
+            document.getElementById("counter").innerText = COUNTER_TEXT.replace("{DAY}", day)
+        }
+
+        document.addEventListener("DOMContentLoaded", e => {
+            setInterval(changeCounterText, 10000);
+        })
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", e => {
+            document.getElementById("disconnected").addEventListener("change", e => {
+                if (e.target.checked) {
+                    e.target.checked = false;
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <!-- 聚焦看板 -->
+    <div class="ts padded horizontally fitted fluid slate">
+        <div class="ts very narrow container">
+            <!-- 標題 -->
+            <h1 class="ts header">
+                嘿！小易又出現了
+                <div class="sub header">還有天才雷雷 yay</div>
+            </h1>
+            <!-- / 標題 -->
+        </div>
+    </div>
+    <!-- / 聚焦看板 -->
+    <br>
+    <div class="ts very narrow container">
+        <div class="ts raised center aligned segment">
+            <p>某個神奇國家的小朋友滿 18 歲時，設計的神奇東東</p>
+            <p id="counter"></p>
+        </div>
+        <img class="ts small centered image" src="https://i.imgur.com/IQs3iTP.png">
+        <div class="ts segment">
+            <form class="ts loading form">
+                <div class="field">
+                    <label></label>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <label></label>
+                    <input type="email">
+                </div>
+            </form>
+        </div>
+        <div class="ts clearing segment">
+            <form class="ts form">
+                <div class="two fields">
+                    <div class="field">
+                        <label>名ㄗ</label>
+                        <input type="text" name='name'>
+                    </div>
+                    <div class="field">
+                        <label>庫郵箱</label>
+                        <input type="email" name='email'>
+                    </div>
+                </div>
+                <div class="resizable field">
+                    <label>庫字</label>
+                    <textarea placeholder="Hi" name='content'></textarea>
+                </div>
+                <div class="field">
+                    <div class="ts checkbox">
+                        <input id="disconnected" type="checkbox">
+                        <label for="disconnected">我的伺服器沒有斷線。</label>
+                    </div>
+                </div>
+                <button class="ts right floated button">送出</button>
+            </form>
+        </div>
+        <div class="ts section divider"></div>
+        Copyright © 2002 -
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+        <a href="https://steveyi.net/">小易</a> All rights reserved.
+    </div>
+    </div>
+</body>
+
+</html>
