@@ -9,7 +9,7 @@
 
 各種內容都行
 
-[](https://github.com/SteveYi-LAB/birthday.steveyi.net/blob/main/image/screenshot-1.png)
+[](https://raw.githubusercontent.com/SteveYi-LAB/birthday.steveyi.net/main/image/screenshot-1.png)
 
 ~~斷線易大師也行~~
 
