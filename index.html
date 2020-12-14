@@ -22,7 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
     <style>
-        :root {
+         :root {
             --loading-progress: 0%;
             --leko: '客家';
             --gnehs: '可愛';
@@ -30,18 +30,18 @@
             --gnehs-website: 'https://gnehs.net/';
             --is-leko-stubu: true;
         }
-
+        
         @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
             body {
                 -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--loading-progress), rgba(0, 0, 0, 0) var(--loading-progress));
                 mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--loading-progress), rgba(0, 0, 0, 0)var(--loading-progress));
             }
         }
-
+        
         .cake {
             transition: all .4s ease;
         }
-
+        
         .cake:hover {
             transform: rotate(360deg);
         }
@@ -150,6 +150,10 @@
                     <div class="ts checkbox">
                         <input id="disconnected" type="checkbox">
                         <label for="disconnected">我的伺服器沒有斷線。</label>
+                    </div>
+                    <div class='captcha_wrapper'>
+                        <div class='g-recaptcha' data-sitekey=6LdkGd8UAAAAAM2gOhnVwf64D2arRTf0OXI6tNSy>
+                        </div>
                     </div>
                 </div>
                 <button class="ts right floated button">送出</button>
