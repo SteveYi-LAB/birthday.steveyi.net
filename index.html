@@ -1,7 +1,7 @@
 <!--
     酷雷雷教(幫)小易寫網頁ww
     https://leko.moe/
-    小易沒有美感，勝勝快來教我
+    小易沒有美感，可愛勝勝快來教我
     謝謝Sean幫我放後端 ay
     腹黑新婚快樂！
     海豹生日快樂！
@@ -12,15 +12,39 @@
 <head>
     <meta charset="utf-8">
     <title>嘿！小易 18 歲了</title>
-    <link href="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.css" rel='stylesheet'>
-    <script src="https://cdn.rawgit.com/TeaMeow/TocasUI/2.3.2/dist/tocas.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Tocas UI：CSS 與元件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    <!-- Tocas JS：模塊與 JavaScript 函式 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="./glitch.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
     <style>
+        :root {
+            --loading-progress: 0%;
+            --leko: '會爆炸';
+            --gnehs: '可愛';
+            --gnehs-website: 'https://gnehs.net/';
+            --is-leko-stubu: true;
+        }
 
+        @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
+            body {
+                -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--loading-progress), rgba(0, 0, 0, 0) var(--loading-progress));
+                mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--loading-progress), rgba(0, 0, 0, 0)var(--loading-progress));
+            }
+        }
+
+        .cake {
+            transition: all .4s ease;
+        }
+
+        .cake:hover {
+            transform: rotate(360deg);
+        }
     </style>
-
     <!-- 小易計時器 -->
     <script>
         const COUNTER_TEXT = "你知道嗎？小易已經誕生 {DAY} 天了！"
@@ -38,7 +62,7 @@
         function changeCounterText() {
             const day = dateDiffInDays(BIRTHDAY, new Date())
 
-            document.getElementById("counter").innerText = COUNTER_TEXT.replace("{DAY}", day)
+            document.getElementById("counter").innerText = `你知道嗎？小易已經誕生 ${day} 天了！`
         }
 
         document.addEventListener("DOMContentLoaded", e => {
@@ -54,29 +78,46 @@
             })
         })
     </script>
+    <script>
+        let root = document.documentElement
+        if (Boolean(getComputedStyle(document.documentElement).getPropertyValue('--is-leko-stubu'))) {
+            let loadingProgress = 0;
+            let loadingInterval;
 
+            function loading() {
+                loadingProgress += loadingProgress >= 50 && loadingProgress <= 70 ? 0.3 : 0.1
+                root.style.setProperty('--loading-progress', loadingProgress + "%");
+                if (loadingProgress >= 100) {
+                    clearInterval(loadingInterval)
+                }
+            }
+            document.addEventListener("DOMContentLoaded", e => {
+                loadingInterval = setInterval(loading, 20);
+            })
+        }
+    </script>
 </head>
 
 <body>
-    <!-- 聚焦看板 -->
+    <!-- 聚焦看板寶寶 -->
     <div class="ts padded horizontally fitted fluid slate">
         <div class="ts very narrow container">
-            <!-- 標題 -->
-            <h1 class="ts header">
+            <!-- 標題寶寶 -->
+            <h1 class="ts header glitch" data-text="嘿！小易又出現了">
                 嘿！小易又出現了
-                <div class="sub header">還有天才雷雷 yay</div>
+                <div class="sub header ">還有<span style="text-decoration:line-through">天才</span>雷雷 yay</div>
             </h1>
-            <!-- / 標題 -->
+            <!-- / 標題寶寶 -->
         </div>
     </div>
-    <!-- / 聚焦看板 -->
+    <!-- / 聚焦看板寶寶 -->
     <br>
     <div class="ts very narrow container">
         <div class="ts raised center aligned segment">
             <p>某個神奇國家的小朋友滿 18 歲時，設計的神奇東東</p>
             <p id="counter"></p>
         </div>
-        <img class="ts small centered image" src="https://i.imgur.com/IQs3iTP.png">
+        <img class="ts small centered image cake" src="https://i.imgur.com/IQs3iTP.png">
         <div class="ts segment">
             <form class="ts loading form">
                 <div class="field">
@@ -120,7 +161,8 @@
             document.write(new Date().getFullYear());
         </script>
         <a href="https://steveyi.net/">小易</a> All rights reserved.
-    </div>
+        <br />
+        <br />
     </div>
 </body>
 
