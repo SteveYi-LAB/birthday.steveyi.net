@@ -24,28 +24,28 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="https://static.yiy.tw/media/logo/birthday_by_iamnjlu.jpg">
     <style>
-         :root {
+        :root {
             --loading-progress: 0%;
-            --leko: '客家';
+            --leko: '客家', '會爆炸', '笨雷雷';
             --edisonlee55: '貓咪';
-            --gnehs: '笨料料';
+            --gnehs: '可愛';
             --seadog007: '喵';
             --gnehs-website: 'https://gnehs.net/';
             --is-leko-stubu: true;
             --is-gnehs-stubu: true;
         }
-        
+
         @supports(-webkit-mask-image: url(#mask)) or (mask-image: url(#mask)) {
             body {
                 -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--loading-progress), rgba(0, 0, 0, 0) var(--loading-progress));
                 mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) var(--loading-progress), rgba(0, 0, 0, 0)var(--loading-progress));
             }
         }
-        
+
         .cake {
             transition: all .4s ease;
         }
-        
+
         .cake:hover {
             transform: rotate(360deg);
         }
@@ -84,12 +84,13 @@
     </script>
     <script>
         let root = document.documentElement
+        let loadingProgress = 0;
+        let loadingInterval;
+
         if (Boolean(getComputedStyle(document.documentElement).getPropertyValue('--is-leko-stubu'))) {
-            let loadingProgress = 0;
-            let loadingInterval;
 
             function loading() {
-                loadingProgress += loadingProgress >= 50 && loadingProgress <= 70 ? 0.3 : 0.1
+                loadingProgress += loadingProgress >= 50 && loadingProgress <= 70 ? 0.3 : 0.7
                 root.style.setProperty('--loading-progress', loadingProgress + "%");
                 if (loadingProgress >= 100) {
                     clearInterval(loadingInterval)
