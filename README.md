@@ -31,6 +31,6 @@
 
 <img src="https://raw.githubusercontent.com/SteveYi-LAB/birthday.steveyi.net/main/image/screenshot-1.png">
 
-/**
+<!--
 但我最可愛了(X
-**/
+-->
