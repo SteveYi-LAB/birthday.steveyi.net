@@ -29,7 +29,7 @@
 
 [勝勝 Gnehs](https://github.com/gnehs)
 
-<img src="https://raw.githubusercontent.com/SteveYi-LAB/birthday.steveyi.net/main/image/screenshot-1.png">
+<img src="https://raw.githubusercontent.com/SteveYi-LAB/birthday.steveyi.net/main/image/screenshot-2.png">
 
 <!--
 但我最可愛了(X
