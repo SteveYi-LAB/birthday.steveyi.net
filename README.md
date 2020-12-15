@@ -18,3 +18,19 @@
 [雷雷 Leko](https://github.com/lekoOwO)
 
 [勝勝 Gnehs](https://github.com/gnehs)
+
+### 感謝以下PR
+
+[海豹Seadog](https://github.com/seadog007)
+
+[Edison Lee](https://github.com/edisonlee55)
+
+[雷雷 Leko](https://github.com/lekoOwO)
+
+[勝勝 Gnehs](https://github.com/gnehs)
+
+<img src="https://raw.githubusercontent.com/SteveYi-LAB/birthday.steveyi.net/main/image/screenshot-1.png">
+
+/**
+但我最可愛了(X
+**/
