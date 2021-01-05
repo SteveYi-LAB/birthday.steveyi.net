@@ -19,9 +19,11 @@
 
 [勝勝 Gnehs](https://github.com/gnehs)
 
+[Sean](https://github.com/Sea-n)
+
 ### 感謝以下PR
 
-[海豹Seadog](https://github.com/seadog007)
+[海豹 Seadog](https://github.com/seadog007)
 
 [Edison Lee](https://github.com/edisonlee55)
 
