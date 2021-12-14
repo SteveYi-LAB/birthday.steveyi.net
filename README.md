@@ -1,9 +1,9 @@
 # birthday.steveyi.net
  SteveYi's Birthday!
 
-小易18歲了耶！
+小易19歲了耶！
 
-這個網站是為了慶祝小易18歲時設計的
+這個網站是為了慶祝小易19歲時設計的
 
 趕快來發PR吧(X
 
